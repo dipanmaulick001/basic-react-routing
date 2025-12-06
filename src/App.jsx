@@ -1,5 +1,5 @@
 
-import {BrowserRouter , Routes , Route , Link, Links} from "react-router-dom"
+import {BrowserRouter , Routes , Route , Link, useNavigate} from "react-router-dom"
 import './App.css'
 
 function App() {
@@ -25,8 +25,15 @@ function App() {
 
 
 function Class12Program(){
+  const navigate = useNavigate();
+
+  function redirectUser(){
+    navigate("/")
+  }
+
   return <div>
     JEE Coaching Programs for Class 12th Students !
+    <button onClick={redirectUser}>Go back to landing page</button>
   </div>
 }
 
