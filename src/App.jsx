@@ -17,10 +17,17 @@ function App() {
             <Route path="/" element={<Landing/>}/>
             <Route path="/jee/class-11-program" element={<Class11Program/>}/>
             <Route path="/jee/class-12-program" element={<Class12Program/>}/>
+            <Route path="*" element={<ErrorPage/>}/>
 
         </Routes>
     </BrowserRouter>
   </div> 
+}
+
+function ErrorPage(){
+  return <div>
+    Please try again later !
+  </div>
 }
 
 
@@ -40,6 +47,10 @@ function Class12Program(){
 function Class11Program(){
   return <div>
     JEE Coaching Programs for Class 11th students ! 
+    <Link to="/">
+        <button>Go back to landing page</button>
+    </Link>
+    
   </div>
 }
 
